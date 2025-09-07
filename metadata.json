@@ -1,0 +1,5 @@
+{
+  "name": "Telegram Mini App by Gemini",
+  "description": "A simple Telegram mini app that displays a 'Watch Now' section for ads and a user profile page. Built with React, TypeScript, and Tailwind CSS.",
+  "requestFramePermissions": []
+}
