@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Screen } from './types';
 import Header from './components/Header';
 import HomeScreen from './components/HomeScreen';
-import WatchNowScreen from './components/WatchNowScreen';
 import ProfileScreen from './components/ProfileScreen';
 
 const App: React.FC = () => {
@@ -28,8 +27,6 @@ const App: React.FC = () => {
 
   const renderScreen = () => {
     switch (screen) {
-      case Screen.WATCH:
-        return <WatchNowScreen setScreen={setScreen} />;
       case Screen.PROFILE:
         return <ProfileScreen setScreen={setScreen} />;
       case Screen.HOME:

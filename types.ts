@@ -1,6 +1,5 @@
 export enum Screen {
   HOME,
-  WATCH,
   PROFILE,
 }
 
@@ -34,5 +33,6 @@ declare global {
     Telegram?: {
       WebApp: TelegramWebApp;
     };
+    show_9836298?: () => void;
   }
 }

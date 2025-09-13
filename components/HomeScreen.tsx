@@ -7,6 +7,20 @@ interface HomeScreenProps {
 }
 
 const HomeScreen: React.FC<HomeScreenProps> = ({ setScreen }) => {
+  const handleWatchNowClick = () => {
+    if (typeof window.show_9836298 === 'function') {
+      try {
+        window.show_9836298();
+      } catch (error) {
+        console.error("Ad SDK error:", error);
+        alert("Sorry, there was a problem loading the ad.");
+      }
+    } else {
+      console.warn("Ad SDK function not found. The ad script might be blocked or failed to load.");
+      alert("Ad functionality is currently unavailable.");
+    }
+  };
+
   return (
     <div className="w-full max-w-sm flex flex-col items-center space-y-6">
        <div className="text-center">
@@ -14,7 +28,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ setScreen }) => {
          <p className="text-gray-400 mt-2">Choose an option to continue.</p>
        </div>
       <button
-        onClick={() => setScreen(Screen.WATCH)}
+        onClick={handleWatchNowClick}
         className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-4 rounded-xl shadow-lg transform transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300"
       >
         Watch Now
