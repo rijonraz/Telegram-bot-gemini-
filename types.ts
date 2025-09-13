@@ -34,7 +34,5 @@ declare global {
     Telegram?: {
       WebApp: TelegramWebApp;
     };
-    // Add type for the ad SDK function
-    show_9836298?: () => void;
   }
 }
